@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome to Firebase Hosting</title>
@@ -21,16 +21,33 @@
     <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 
     <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
-    <!-- APP -->
-    <script defer src="app/thermometer.js"></script>
-    <script defer src="app/thermometerDbService.js"></script>
-    <link href="app/thermometer.css" rel="stylesheet" type="text/css"/>
-  </head>
-  <body>
-  <div id="container">
-    <div ng-app='t66thermometer' class='t66thermometer'>
-      <t66thermometer>		</t66thermometer>
+</head>
+<body>
+<div id="container">
+    <div id="loading">Loading...</div>
+    <div id="loaded" class="hidden">
+        <div id="main">
+            <div id="user-signed-in" class="hidden">
+                <div id="user-banner">
+                    <div id="menu"></div>
+                    <div id="user-info">
+                        <div id="name"></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div id="scoutinfo" style="display:initial">
+
+                </div>
+                <div class="softwareversion">v6.1.0</div>
+                <p>
+                    <button id="sign-out">Sign Out</button>
+                </p>
+            </div>
+            <div id="user-signed-out" class="hidden">
+                <div id="firebaseui-container"></div>
+            </div>
+        </div>
     </div>
-  </div>
-  </body>
+</div>
+<script src="app.js" defer></script>  </body>
 </html>

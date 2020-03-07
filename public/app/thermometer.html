@@ -1,0 +1,14 @@
+<div class="donation-meter">
+    <strong>Our Goal</strong>
+    <strong class="goal">${{$ctrl.goal}}</strong>
+    <span class="glass">
+      <strong class="total" ng-style="{'bottom': $ctrl.percent()}">${{$ctrl.currentTotal()}}</strong>
+      <span class="amount" ng-style="{'height': $ctrl.percent()}"></span>
+  </span>
+    <div class="bulb">
+        <span class="red-circle"></span>
+        <span class="filler">
+          <span></span>
+      </span>
+    </div>
+</div>

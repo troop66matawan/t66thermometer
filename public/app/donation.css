@@ -1,7 +1,17 @@
+.donation-view {
+    display: flex;
+    margin: 15px;
+    width: 100%;
+}
+
 .donation-table {
-    height: 380px;
-    margin-bottom: 20px;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 300px;
 }
 .donation-row {
     display:flex;
@@ -13,16 +23,19 @@
 }
 
 .donation-amount {
+    margin-left: auto;
     margin-right: 10px;
 }
 
 .donation-entry-container {
     display: flex;
-    flex-direction: column;
-    height: 50px;
-}.donation-entry {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.donation-entry {
      display: flex;
-     flex-direction: row;
+     flex-direction: column;
+     height: 50px;
  }
 .donation-entry-name-label {
     width: 150px;
@@ -44,4 +57,7 @@
     width: 75px;
     margin-right: 25px;
     border-radius: 10px;
+    display: inline-flex;
+    justify-content: center;
+    margin: auto;
 }

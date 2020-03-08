@@ -1,13 +1,15 @@
-<div class="donation-entry-container">
-    <div class="donation-entry">
-        <label for='entry-name' class="donation-entry-name-label">Name</label>
-        <label for="entry-dollar" class="donation-entry-dollar-label">Amount</label>
-    </div>
-    <div class="donation-entry">
-        <form name="donationForm" novalidate>
+<form name="donationForm" novalidate>
+    <div class="donation-entry-container">
+        <div class="donation-entry">
+            <label for='entry-name' class="donation-entry-name-label">Name</label>
             <input id='entry-name' class="donation-entry-name" type="text" ng-model="$ctrl.name">
+        </div>
+        <div class="donation-entry">
+            <label for="entry-dollar" class="donation-entry-dollar-label">Amount</label>
             <input id='entry-dollar' class="donation-entry-dollar" type="text" ng-model="$ctrl.amount">
+        </div>
+        <div class="donation-entry">
             <button class="donation-entry-add" ng-click="$ctrl.addDonation()">ADD</button>
-        </form>
+        </div>
     </div>
-</div>
+</form>

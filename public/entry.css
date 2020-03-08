@@ -11,6 +11,7 @@ div#main-container {
 div#top div#container{
     width: 20%;
     height: 100%;
+    min-width: 100px;
 }
 div#footer {
     height: calc(100vh - 490px);
@@ -29,4 +30,11 @@ div#footer p {
 }
 div#entry-container {
     width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+#donation-view {
+    display: flex;
+    flex: 9;
 }

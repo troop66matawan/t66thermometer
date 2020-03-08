@@ -1,37 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to Firebase Hosting</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/7.10.0/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/7.10.0/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.10.0/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.10.0/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.10.0/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
-    <!-- AngularFire -->
-    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/7.10.0/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/7.10.0/firebase-auth.js"></script>
+  <script defer src="/__/firebase/7.10.0/firebase-database.js"></script>
+  <script defer src="/__/firebase/7.10.0/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/7.10.0/firebase-storage.js"></script>
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script defer src="/__/firebase/init.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.css" />
+  <!-- AngularFire -->
+  <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 
-    <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
-    <!-- APP -->
-    <script defer src="app/thermometer.js"></script>
-    <script defer src="app/thermometerDbService.js"></script>
-    <link href="app/thermometer.css" rel="stylesheet" type="text/css"/>
-  </head>
-  <body>
-  <div id="container">
-    <div ng-app='t66thermometer' class='t66thermometer'>
-      <t66thermometer>		</t66thermometer>
+  <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="entry.css" rel="stylesheet" type="text/css" media="screen" />
+  <!-- APP -->
+  <script defer src="app/thermometer.js"></script>
+  <script defer src="app/thermometerDbService.js"></script>
+  <link href="app/thermometer.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="body-container">
+  <div id="loading">Loading...</div>
+  <div id="loaded" class="hidden">
+    <div id="main">
+      <div id="user-signed-in" class="hidden">
+        <div id="user-banner">
+          <div id="menu"></div>
+          <div id="user-info">
+            <div id="name"></div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div id="main-container" ng-app='t66thermometer' class='t66thermometer'>
+          <div id="top">
+            <div id="container">
+              <div >
+                <t66thermometer>		</t66thermometer>
+              </div>
+            </div>
+          </div>
+          <div id="footer">
+            <img class="logo" src="images/Troop 66 Logo_trans.png">
+            <p>
+              <button id="sign-out">Sign Out</button>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="user-signed-out" class="hidden">
+        <div id="firebaseui-container"></div>
+      </div>
     </div>
-    <img class="logo" src="images/Troop 66 Logo_trans.png">
   </div>
-  </body>
+</div>
+<script src="app.js" defer></script>  </body>
 </html>

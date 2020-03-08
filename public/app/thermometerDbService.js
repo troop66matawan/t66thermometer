@@ -17,7 +17,7 @@ function thermometerDb($q,$rootScope) {
         _this.donationRef = firedb.ref('event/2020CakeAuction/Donations');
         _this.donationRef.on('value', function(curSnapshot) {
             const dbInst = curSnapshot.val();
-            console.log(JSON.stringify(dbInst));
+            //console.log(JSON.stringify(dbInst));
             _this.donations = _this.firePropsToArray(dbInst);
             if (_this.needApply) {
                 $rootScope.$apply();

@@ -16,16 +16,19 @@ function thermometerDb($q,$rootScope) {
         _this.donationRef = firedb.ref('event/2020CakeAuction/Donations');
         _this.donationRef.on('value', function(curSnapshot) {
             const dbInst = curSnapshot.val();
+            console.log(_this.donations(dbInst));
             _this.donations = _this.firePropsToArray(dbInst);
-            console.log(_this.donations);
             $rootScope.$apply();
         });
     };
     _this.firePropsToArray = function(fireprops) {
         const donations = [];
-        for (const donation in fireprops) {
-            if (fireprops.hasOwnProperty(donation)) {
-                const entry = fireprops[donation];
+        for (const name in fireprops) {
+            if (fireprops.hasOwnProperty(name)) {
+                const entry = {
+                    name: name,
+                    value: fireprops[name]
+                };
                 donations.push(entry);
             }
         }

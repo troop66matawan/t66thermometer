@@ -1,0 +1,47 @@
+.donation-table {
+    height: 380px;
+    margin-bottom: 20px;
+    overflow-y: auto;
+}
+.donation-row {
+    display:flex;
+    flex-direction: row;
+}
+
+.donation-name {
+    margin-right: 10px;
+}
+
+.donation-amount {
+    margin-right: 10px;
+}
+
+.donation-entry-container {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+}.donation-entry {
+     display: flex;
+     flex-direction: row;
+ }
+.donation-entry-name-label {
+    width: 150px;
+    margin-right: 25px;
+}
+.donation-entry-dollar-label {
+    width: 90px;
+    margin-right: 25px;
+}
+.donation-entry-name {
+    width: 150px;
+    margin-right: 25px;
+}
+.donation-entry-dollar {
+    width: 90px;
+    margin-right: 25px;
+}
+.donation-entry-add {
+    width: 75px;
+    margin-right: 25px;
+    border-radius: 10px;
+}

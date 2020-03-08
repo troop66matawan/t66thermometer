@@ -26,7 +26,7 @@ function thermometerController(thermometerDb) {
        const donations = thermometerDb.donations;
        let total = 0;
        for (let i=0; i < donations.length; ++i) {
-           total += donations[i];
+           total += donations[i].value;
        }
        return total;
    };

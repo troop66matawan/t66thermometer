@@ -1,0 +1,8 @@
+<div class="donation-view">
+    <div class="donation-table">
+        <div class="donation-row" ng-repeat="row in $ctrl.getDonations()">
+            <div class="donation-name">{{row.name}}</div>
+            <div class="donation-amount">${{row.value}}</div>
+        </div>
+    </div>
+</div>

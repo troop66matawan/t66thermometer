@@ -15,15 +15,23 @@
     <script defer src="/__/firebase/7.10.0/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
+    <script src="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.css" />
     <!-- AngularFire -->
     <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 
     <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="entry.css" rel="stylesheet" type="text/css" media="screen" />
+    <!-- APP -->
+    <script defer src="app/thermometer.js"></script>
+    <script defer src="app/thermometerDbService.js"></script>
+    <link href="app/thermometer.css" rel="stylesheet" type="text/css"/>
+    <script defer src="app/donationView.js"></script>
+    <script defer src="app/donationEntry.js"></script>
+    <link href="app/donation.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<div id="container">
+<div id="body-container">
     <div id="loading">Loading...</div>
     <div id="loaded" class="hidden">
         <div id="main">
@@ -35,13 +43,25 @@
                         <div class="clearfix"></div>
                     </div>
                 </div>
-                <div id="scoutinfo" style="display:initial">
-
+                <div id="main-container" ng-app='t66thermometer' class='t66thermometer'>
+                    <div id="top">
+                        <div id="container">
+                            <div >
+                                <t66thermometer>		</t66thermometer>
+                            </div>
+                        </div>
+                        <div id="entry-container">
+                            <donation-view></donation-view>
+                            <donation-entry></donation-entry>
+                        </div>
+                    </div>
+                    <div id="footer">
+                        <img class="logo" src="images/Troop 66 Logo_trans.png">
+                        <p>
+                            <button id="sign-out">Sign Out</button>
+                        </p>
+                    </div>
                 </div>
-                <div class="softwareversion">v6.1.0</div>
-                <p>
-                    <button id="sign-out">Sign Out</button>
-                </p>
             </div>
             <div id="user-signed-out" class="hidden">
                 <div id="firebaseui-container"></div>

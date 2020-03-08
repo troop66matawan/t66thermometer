@@ -1,0 +1,32 @@
+div#top {
+    display: flex;
+    flex-direction: row;
+    background: #d0c0b0;
+    height: 450px;
+}
+div#main-container {
+    height: calc(100vh - 40px);
+    background: #d0c0b0;
+}
+div#top div#container{
+    width: 20%;
+    height: 100%;
+}
+div#footer {
+    height: calc(100vh - 490px);
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+div#footer .logo {
+    height: calc(100vh - 540px);
+}
+div#footer p {
+    display: flex;
+    margin: 0 auto;
+}
+div#entry-container {
+    width: 80%;
+}
